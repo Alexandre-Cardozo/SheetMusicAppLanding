@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sheet Music App — Privacy Policy / Política de Privacidade</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1a1a1a;
+      --muted: #5a5a5a;
+      --accent: #2563eb;
+      --border: #e5e7eb;
+      --card: #f8fafc;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --fg: #e2e8f0;
+        --muted: #94a3b8;
+        --accent: #60a5fa;
+        --border: #1e293b;
+        --card: #1e293b;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      font-size: 17px;
+    }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 32px 20px 80px; }
+    header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 28px; }
+    h1 { font-size: 1.9rem; margin: 0 0 4px; }
+    h2 { font-size: 1.3rem; margin-top: 36px; border-left: 4px solid var(--accent); padding-left: 12px; }
+    h3 { font-size: 1.05rem; margin-top: 24px; }
+    p, li { color: var(--fg); }
+    .muted { color: var(--muted); font-size: 0.95rem; }
+    a { color: var(--accent); }
+    code { background: var(--card); padding: 1px 6px; border-radius: 4px; font-size: 0.9em; }
+    .lang-switch { display: flex; gap: 8px; margin-bottom: 24px; }
+    .lang-switch button {
+      font: inherit; cursor: pointer; border: 1px solid var(--border);
+      background: var(--card); color: var(--fg); padding: 7px 16px; border-radius: 999px;
+    }
+    .lang-switch button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .summary {
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+      padding: 16px 20px; margin: 20px 0;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.95rem; }
+    th, td { border: 1px solid var(--border); padding: 9px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--card); }
+    .lang { display: none; }
+    .lang.active { display: block; }
+    footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="lang-switch">
+      <button id="btn-pt" class="active" onclick="setLang('pt')">Português</button>
+      <button id="btn-en" onclick="setLang('en')">English</button>
+    </div>
+
+    <!-- ===================== PORTUGUÊS ===================== -->
+    <div id="pt" class="lang active">
+      <header>
+        <h1>Política de Privacidade — Sheet Music App</h1>
+        <p class="muted">Última atualização: 11 de junho de 2026</p>
+      </header>
+
+      <div class="summary">
+        <strong>Resumo rápido:</strong> o Sheet Music App é um leitor e organizador de
+        partituras em PDF. Ele funciona inteiramente no seu dispositivo. Não temos servidores
+        próprios, não criamos contas, não usamos publicidade e não rastreamos você. Os dados
+        ficam no seu aparelho. Conexões externas acontecem apenas com o Google (quando
+        <em>você</em> conecta sua conta do Google Drive) e com o serviço de reconhecimento de
+        voz do seu sistema operacional (quando <em>você</em> usa a busca por voz).
+      </div>
+
+      <h2>1. Quem somos</h2>
+      <p>
+        Este aplicativo ("Sheet Music App", "o app", "nós") é desenvolvido por
+        <strong>Alexandre Cardozo</strong>. Identificador do app:
+        <code>com.alexandrecardozo.sheetmusicapp</code>. Para qualquer dúvida sobre privacidade,
+        entre em contato pelo e-mail informado na seção <a href="#contato-pt">Contato</a>.
+      </p>
+
+      <h2>2. Informações que o app acessa</h2>
+      <p>O app foi projetado para coletar o mínimo possível. Veja exatamente o que ele acessa:</p>
+      <table>
+        <tr><th>Categoria</th><th>O que é</th><th>Para quê</th><th>Onde fica</th></tr>
+        <tr>
+          <td>Conta do Google</td>
+          <td>Quando você opta por conectar o Google Drive: identificador da conta, e-mail,
+          nome e foto do perfil fornecidos pelo login do Google.</td>
+          <td>Exibir qual conta está conectada e organizar a biblioteca do Drive por conta.</td>
+          <td>Apenas no seu dispositivo.</td>
+        </tr>
+        <tr>
+          <td>Arquivos do Google Drive (somente leitura)</td>
+          <td>Metadados (nome, identificador, data de modificação, tamanho) e o conteúdo dos
+          PDFs que você escolhe abrir. Escopo solicitado: <code>drive.readonly</code>.</td>
+          <td>Listar e abrir suas partituras do Drive. O app nunca modifica, apaga ou cria
+          arquivos no seu Drive.</td>
+          <td>Cache temporário no seu dispositivo (baixado sob demanda).</td>
+        </tr>
+        <tr>
+          <td>Arquivos do dispositivo</td>
+          <td>PDFs que você seleciona pelo seletor de arquivos/pastas do sistema.</td>
+          <td>Exibir e organizar suas partituras locais.</td>
+          <td>Copiados para a área privada do app, no seu dispositivo.</td>
+        </tr>
+        <tr>
+          <td>Áudio (busca por voz)</td>
+          <td>O áudio captado pelo microfone quando você toca no botão de busca por voz.</td>
+          <td>Converter sua fala em texto para filtrar a busca de partituras.</td>
+          <td>Processado pelo serviço de reconhecimento de voz do seu sistema; não é
+          armazenado pelo app.</td>
+        </tr>
+        <tr>
+          <td>Preferências do app</td>
+          <td>Tema (claro/escuro), idioma da busca por voz, suas listas e a organização da
+          biblioteca.</td>
+          <td>Lembrar suas configurações entre sessões.</td>
+          <td>Apenas no seu dispositivo.</td>
+        </tr>
+      </table>
+
+      <h2>3. O que NÃO fazemos</h2>
+      <ul>
+        <li>Não temos servidores próprios — o app não envia seus dados para nós.</li>
+        <li>Não exibimos anúncios e não usamos identificadores de publicidade.</li>
+        <li>Não usamos ferramentas de analytics, rastreamento ou criação de perfil.</li>
+        <li>Não vendemos nem compartilhamos seus dados com terceiros para fins comerciais.</li>
+        <li>Não exigimos criação de conta para usar o app.</li>
+      </ul>
+
+      <h2>4. Permissões do dispositivo</h2>
+      <ul>
+        <li><strong>Microfone</strong> — usado exclusivamente durante a busca por voz, quando
+        você inicia a ação. O app não grava em segundo plano.</li>
+        <li><strong>Acesso a arquivos</strong> — feito pelo seletor do sistema; o app só
+        enxerga os arquivos e pastas que você escolhe.</li>
+        <li><strong>Internet</strong> — usada apenas para se comunicar com o Google Drive
+        quando você conecta sua conta, e para o reconhecimento de voz (conforme o serviço do
+        seu sistema).</li>
+      </ul>
+
+      <h2>5. Serviços de terceiros</h2>
+      <p>O app integra os seguintes serviços, sob as políticas de privacidade dos respectivos
+      provedores:</p>
+      <ul>
+        <li><strong>Login do Google e Google Drive API</strong> —
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a>.</li>
+        <li><strong>Reconhecimento de voz do sistema</strong> — no Android, normalmente fornecido
+        pelo Google; no iOS, pela Apple. O áudio pode ser processado nos servidores desses
+        provedores conforme as configurações do seu dispositivo.</li>
+      </ul>
+
+      <h2>6. Uso de dados das APIs do Google (Limited Use)</h2>
+      <p>
+        O uso e a transferência, pelo Sheet Music App, de informações recebidas das APIs do
+        Google obedecem à
+        <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>,
+        incluindo seus requisitos de Uso Limitado (<em>Limited Use</em>). Especificamente, os
+        dados do seu Google Drive são acessados <strong>somente para leitura</strong>, usados
+        <strong>exclusivamente</strong> para exibir e abrir suas partituras dentro do app, não
+        são transferidos a terceiros, não são usados para publicidade e não são lidos por
+        humanos.
+      </p>
+
+      <h2>7. Retenção e exclusão de dados</h2>
+      <p>
+        Como todos os dados ficam no seu dispositivo, você tem controle total sobre eles:
+      </p>
+      <ul>
+        <li><strong>Desconectar a conta do Google</strong> remove do app as informações da conta
+        e o cache associado ao Drive.</li>
+        <li><strong>Desinstalar o app</strong> apaga permanentemente toda a biblioteca local,
+        listas, preferências e caches.</li>
+      </ul>
+
+      <h2>8. Segurança</h2>
+      <p>
+        Os dados são armazenados na área privada do app, protegida pelo sistema operacional do
+        dispositivo. As credenciais de acesso ao Google são gerenciadas pelos componentes
+        oficiais de login do Google.
+      </p>
+
+      <h2>9. Privacidade de crianças</h2>
+      <p>
+        O app não se destina a crianças menores de 13 anos e não coleta intencionalmente dados
+        de crianças.
+      </p>
+
+      <h2>10. Seus direitos</h2>
+      <p>
+        Conforme a LGPD (Brasil) e o GDPR (União Europeia), você tem direito de acessar,
+        corrigir e excluir seus dados. Como o app não mantém dados em servidores nossos, esses
+        direitos são exercidos diretamente no dispositivo (desconectando a conta ou
+        desinstalando o app). Para dúvidas, use o contato abaixo.
+      </p>
+
+      <h2>11. Alterações nesta política</h2>
+      <p>
+        Podemos atualizar esta política periodicamente. A data de "última atualização" no topo
+        indica a versão vigente. Mudanças relevantes serão refletidas nesta página.
+      </p>
+
+      <h2 id="contato-pt">12. Contato</h2>
+      <p>
+        Dúvidas sobre esta política ou sobre privacidade no app:
+        <strong><a href="mailto:alexandrescfilho@gmail.com">alexandrescfilho@gmail.com</a></strong>
+      </p>
+
+      <footer class="muted">© 2026 Alexandre Cardozo — Sheet Music App.</footer>
+    </div>
+
+    <!-- ===================== ENGLISH ===================== -->
+    <div id="en" class="lang">
+      <header>
+        <h1>Privacy Policy — Sheet Music App</h1>
+        <p class="muted">Last updated: June 11, 2026</p>
+      </header>
+
+      <div class="summary">
+        <strong>Quick summary:</strong> Sheet Music App is a PDF sheet-music reader and
+        organizer. It runs entirely on your device. We have no servers of our own, we don't
+        create accounts, we show no ads, and we don't track you. Your data stays on your device.
+        External connections happen only with Google (when <em>you</em> connect your Google
+        Drive account) and with your operating system's speech-recognition service (when
+        <em>you</em> use voice search).
+      </div>
+
+      <h2>1. Who we are</h2>
+      <p>
+        This application ("Sheet Music App", "the app", "we") is developed by
+        <strong>Alexandre Cardozo</strong>. App identifier:
+        <code>com.alexandrecardozo.sheetmusicapp</code>. For any privacy question, reach us at
+        the email listed in the <a href="#contact-en">Contact</a> section.
+      </p>
+
+      <h2>2. Information the app accesses</h2>
+      <p>The app is designed to collect as little as possible. Here is exactly what it accesses:</p>
+      <table>
+        <tr><th>Category</th><th>What it is</th><th>Why</th><th>Where it lives</th></tr>
+        <tr>
+          <td>Google account</td>
+          <td>When you choose to connect Google Drive: the account identifier, email, name and
+          profile picture provided by Google Sign-In.</td>
+          <td>To show which account is connected and to organize your Drive library per account.</td>
+          <td>On your device only.</td>
+        </tr>
+        <tr>
+          <td>Google Drive files (read-only)</td>
+          <td>Metadata (name, id, modified date, size) and the content of the PDFs you choose to
+          open. Requested scope: <code>drive.readonly</code>.</td>
+          <td>To list and open your sheet music from Drive. The app never modifies, deletes or
+          creates files in your Drive.</td>
+          <td>Temporary cache on your device (downloaded on demand).</td>
+        </tr>
+        <tr>
+          <td>Device files</td>
+          <td>PDFs you select through the system file/folder picker.</td>
+          <td>To display and organize your local sheet music.</td>
+          <td>Copied into the app's private storage, on your device.</td>
+        </tr>
+        <tr>
+          <td>Audio (voice search)</td>
+          <td>Microphone audio captured when you tap the voice-search button.</td>
+          <td>To turn your speech into text and filter your sheet-music search.</td>
+          <td>Processed by your system's speech-recognition service; not stored by the app.</td>
+        </tr>
+        <tr>
+          <td>App preferences</td>
+          <td>Theme (light/dark), voice-search language, your lists and library organization.</td>
+          <td>To remember your settings between sessions.</td>
+          <td>On your device only.</td>
+        </tr>
+      </table>
+
+      <h2>3. What we do NOT do</h2>
+      <ul>
+        <li>We have no servers of our own — the app does not send your data to us.</li>
+        <li>We show no ads and use no advertising identifiers.</li>
+        <li>We use no analytics, tracking or profiling tools.</li>
+        <li>We do not sell or share your data with third parties for commercial purposes.</li>
+        <li>We do not require account creation to use the app.</li>
+      </ul>
+
+      <h2>4. Device permissions</h2>
+      <ul>
+        <li><strong>Microphone</strong> — used only during voice search, when you start the
+        action. The app does not record in the background.</li>
+        <li><strong>File access</strong> — handled by the system picker; the app only sees the
+        files and folders you choose.</li>
+        <li><strong>Internet</strong> — used only to talk to Google Drive when you connect your
+        account, and for speech recognition (depending on your system's service).</li>
+      </ul>
+
+      <h2>5. Third-party services</h2>
+      <p>The app integrates the following services, governed by their own privacy policies:</p>
+      <ul>
+        <li><strong>Google Sign-In and Google Drive API</strong> —
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+        <li><strong>System speech recognition</strong> — on Android, typically provided by
+        Google; on iOS, by Apple. Audio may be processed on those providers' servers depending
+        on your device settings.</li>
+      </ul>
+
+      <h2>6. Google API Services (Limited Use)</h2>
+      <p>
+        Sheet Music App's use and transfer of information received from Google APIs adhere to the
+        <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>,
+        including its Limited Use requirements. Specifically, your Google Drive data is accessed
+        <strong>read-only</strong>, used <strong>solely</strong> to display and open your sheet
+        music inside the app, is not transferred to third parties, is not used for advertising,
+        and is not read by humans.
+      </p>
+
+      <h2>7. Data retention and deletion</h2>
+      <p>Because all data stays on your device, you are fully in control:</p>
+      <ul>
+        <li><strong>Disconnecting your Google account</strong> removes the account information
+        and the associated Drive cache from the app.</li>
+        <li><strong>Uninstalling the app</strong> permanently deletes the entire local library,
+        lists, preferences and caches.</li>
+      </ul>
+
+      <h2>8. Security</h2>
+      <p>
+        Data is stored in the app's private storage, protected by the device's operating system.
+        Google access credentials are managed by Google's official sign-in components.
+      </p>
+
+      <h2>9. Children's privacy</h2>
+      <p>
+        The app is not directed to children under 13 and does not knowingly collect data from
+        children.
+      </p>
+
+      <h2>10. Your rights</h2>
+      <p>
+        Under the LGPD (Brazil) and the GDPR (European Union), you have the right to access,
+        correct and delete your data. Because the app keeps no data on our servers, you exercise
+        these rights directly on the device (by disconnecting the account or uninstalling the
+        app). For questions, use the contact below.
+      </p>
+
+      <h2>11. Changes to this policy</h2>
+      <p>
+        We may update this policy from time to time. The "last updated" date at the top reflects
+        the current version. Material changes will be reflected on this page.
+      </p>
+
+      <h2 id="contact-en">12. Contact</h2>
+      <p>
+        Questions about this policy or about privacy in the app:
+        <strong><a href="mailto:alexandrescfilho@gmail.com">alexandrescfilho@gmail.com</a></strong>
+      </p>
+
+      <footer class="muted">© 2026 Alexandre Cardozo — Sheet Music App.</footer>
+    </div>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.getElementById('pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+    }
+  </script>
+</body>
+</html>
