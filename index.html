@@ -24,7 +24,7 @@ a{color:var(--text);text-decoration:underline;text-underline-offset:2px}
 .wrap{max-width:780px;margin:0 auto;padding:8px 20px 64px}
 header.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;text-decoration:none;color:var(--text)}
-.brand img{width:36px;height:36px;border-radius:8px;flex-shrink:0}
+.brand img{width:48px;height:48px;border-radius:10px;flex-shrink:0}
 .langs{display:flex;gap:8px}
 .langs button{cursor:pointer;border:1px solid var(--border-strong);background:transparent;color:var(--text-soft);padding:6px 14px;border-radius:999px;font-size:14px}
 .langs button[aria-pressed="true"]{background:var(--brand);color:var(--on-brand);border-color:var(--brand)}
@@ -49,7 +49,7 @@ footer a{color:var(--text-soft)}
 <div class="wrap">
   <header class="top">
     <a class="brand" href="/">
-      <img src="logo.png" alt="Sheet Music App" width="36" height="36">
+      <img src="logo.png" alt="Sheet Music App" width="48" height="48">
       <span>Sheet Music App</span>
     </a>
     <div class="langs">
@@ -119,6 +119,7 @@ footer a{color:var(--text-soft)}
 <script>
 (function(){
   function setLang(l){
+    l = (l === 'en') ? 'en' : 'pt';
     document.documentElement.setAttribute('data-lang',l);
     document.documentElement.setAttribute('lang', l==='en'?'en':'pt-BR');
     try{localStorage.setItem('smapp-lang',l);}catch(e){}
